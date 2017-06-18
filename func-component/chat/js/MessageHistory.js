@@ -11,7 +11,9 @@ function MessageHistory({ list }) {
         (item.type === 'typing') ? Typing :
         null;
 
-      messageList.push(<MessageType key={item.id} from={item.from} message={item} />);
+      if (MessageType !== null) {
+        messageList.push(<MessageType key={item.id} from={item.from} message={item} />);
+      }
     });
 
     return (
