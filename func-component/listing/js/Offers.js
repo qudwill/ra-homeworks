@@ -15,9 +15,7 @@ function Offers({source}) {
 
   if (request.status === 200) {
     const data = JSON.parse(request.responseText);
-
-    console.log(data);
-
+    
     output = data.map(offer => 
       <Offer
         key={offer.listing_id}

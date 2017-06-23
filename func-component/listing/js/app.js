@@ -1,6 +1,8 @@
 'use strict';
 
+const offers = <Offers source='https://neto-api.herokuapp.com/etsy' />;
+
 ReactDOM.render(
-  <Offers source='https://neto-api.herokuapp.com/etsy' />,
+  offers,
   document.getElementById('root')
 );

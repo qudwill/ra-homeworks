@@ -8,10 +8,13 @@ function OfferDetails({title, price, currencyCode, quantity}) {
 
   let renderedPrice = null;
 
-  (currencyCode === 'USD') ? (renderedPrice = '$' + price) :
-  (currencyCode === 'EUR') ? (renderedPrice = '€' + price) :
-  (currencyCode === 'GBP') ? (renderedPrice = price + ' ' + currencyCode) :
-  (renderedPrice = currencyCode + ' ' + price);
+  if (currencyCode === 'USD') {
+    renderedPrice = '$' + price;
+  } else if (currencyCode === 'EUR') {
+    renderedPrice = '€' + price;
+  } else {
+    renderedPrice = price + ' ' + currencyCode
+  }
 
   /*
    ** Подготавливаем класс для остатка товаров
@@ -19,10 +22,15 @@ function OfferDetails({title, price, currencyCode, quantity}) {
 
   let quantityClassName = 'item-quantity level-';
 
-  (quantity <= 10) ? (quantityClassName += 'low') :
-  (quantity <= 20) ? (quantityClassName += 'medium') :
-  (quantity > 20) ? (quantityClassName += 'high') :
-  (quantityClassName += 'low');
+  if (quantity <= 10) {
+    quantityClassName += 'low';
+  } else if (quantity <= 20) {
+    quantityClassName += 'medium';
+  } else if (quantity > 20) {
+    quantityClassName += 'high';
+  } else {
+    quantityClassName += 'low';
+  }
 
   return (
     <div className='item-details'>
