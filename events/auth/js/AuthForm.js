@@ -2,6 +2,7 @@
 
 const AuthForm = props => {
   let name, email, password;
+
   const handleSubmit = event => {
     event.preventDefault();
     props.onAuth({
@@ -10,6 +11,7 @@ const AuthForm = props => {
       password: password.value
     });
   };
+
   const handleKey = event => {
     const target = event.currentTarget;
     switch (target.type) {
@@ -24,8 +26,8 @@ const AuthForm = props => {
       }
       break;
     }
-    console.log();
   };
+  
   return (
     <form
       onSubmit={handleSubmit}
