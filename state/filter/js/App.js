@@ -5,8 +5,8 @@ class App extends React.Component {
     super(props);
     
     this.state = {
-      current: this.props.filters[0],
-      projects: this.props.projects
+      current: props.filters[0],
+      projects: props.projects
     }
   }
     

@@ -9,7 +9,7 @@ class App extends React.Component {
 
     this.state = {
       view: VIEW_MODULE
-    }
+    };
   }
 
   viewChange() {
@@ -19,7 +19,7 @@ class App extends React.Component {
 
     this.setState({
       view: view
-    })
+    });
   }
 
   render() {

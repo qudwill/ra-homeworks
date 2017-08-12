@@ -7,7 +7,7 @@ class App extends React.Component {
     this.state = {
       active: this.props.options[0],
       open: false
-    }
+    };
   }
   
   handleChange(option) {
