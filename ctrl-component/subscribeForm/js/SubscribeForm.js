@@ -19,11 +19,13 @@ class SubscribeForm extends React.Component {
 	validateEmail(value, isValid) {
 		let formClassName = '';
 
-		if (isValid) {
-			formClassName = 'is-valid';
-  	} else if (value != '') {
-  		formClassName = 'is-error';
-  	}
+		if (value != '') {
+			if (isValid) {
+				formClassName = 'is-valid';
+  		} else {
+  			formClassName = 'is-error';
+  		}
+		}
 
     this.setState({
     	formClassName: formClassName
