@@ -13,13 +13,13 @@ class SubscribeForm extends React.Component {
 			email: evt.currentTarget.value
 		});
 
-		this.validateEmail(evt.currentTarget.value);
+		this.validateEmail(evt.currentTarget.value, evt.currentTarget.validity.valid);
 	};
 
-	validateEmail(value) {
+	validateEmail(value, isValid) {
 		let formClassName = '';
 
-		if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)) {
+		if (isValid) {
 			formClassName = 'is-valid';
   	} else if (value != '') {
   		formClassName = 'is-error';
