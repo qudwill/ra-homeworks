@@ -21,7 +21,7 @@ class SubscribeForm extends React.Component {
 
 		if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)) {
 			formClassName = 'is-valid';
-  	} else {
+  	} else if (value != '') {
   		formClassName = 'is-error';
   	}
 
