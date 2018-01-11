@@ -9,9 +9,9 @@ const FontSelector = ({fonts, selectedFont, onSelect}) => {
       			value={font.name}
       			data-path={font.path}
       			id={font.name}
-      			onChange={(event) => onSelect({
-      				name: event.currentTarget.value,
-      				path: event.currentTarget.attributes.getNamedItem('data-path').value
+      			onChange={(evt) => onSelect({
+      				name: evt.currentTarget.value,
+      				path: evt.currentTarget.attributes.getNamedItem('data-path').value
       			})}
       		/>
       		<label forHtml={font.name} className="grid-1">
