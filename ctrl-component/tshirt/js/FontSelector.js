@@ -14,7 +14,7 @@ const FontSelector = ({fonts, selectedFont, onSelect}) => {
       				path: evt.currentTarget.attributes.getNamedItem('data-path').value
       			})}
       		/>
-      		<label forHtml={font.name} className="grid-1">
+      		<label htmlFor={font.name} className="grid-1">
       			<PictureFont text={font.name} path={font.path}/>
       		</label>
       	</div>
