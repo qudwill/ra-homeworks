@@ -1,21 +1,21 @@
 const FontSelector = ({fonts, selectedFont, onSelect}) => {
   return (
     <div className="font-picker">
-      {fonts.map(font => (
+      {fonts.map(({name, path}) => (
       	<div className="grid center font-item">
       		<input
       			type="radio"
       			name="font"
-      			value={font.name}
-      			data-path={font.path}
-      			id={font.name}
+      			value={name}
+      			data-path={path}
+      			id={name}
       			onChange={(evt) => onSelect({
       				name: evt.currentTarget.value,
       				path: evt.currentTarget.attributes.getNamedItem('data-path').value
       			})}
       		/>
-      		<label htmlFor={font.name} className="grid-1">
-      			<PictureFont text={font.name} path={font.path}/>
+      		<label htmlFor={name} className="grid-1">
+      			<PictureFont text={name} path={path}/>
       		</label>
       	</div>
       ))}
