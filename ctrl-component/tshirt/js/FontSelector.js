@@ -1,4 +1,6 @@
 const FontSelector = ({fonts, selectedFont, onSelect}) => {
+  const demoText = 'abcd';
+
   return (
     <div className="font-picker">
       {fonts.map(({name, path}) => (
@@ -15,7 +17,7 @@ const FontSelector = ({fonts, selectedFont, onSelect}) => {
       			})}
       		/>
       		<label htmlFor={name} className="grid-1">
-      			<PictureFont text={name} path={path}/>
+      			<PictureFont text={demoText} path={path}/>
       		</label>
       	</div>
       ))}
