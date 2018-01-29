@@ -8,7 +8,7 @@ const TextRenderLine = ({value, onChange}) => {
 				rows="2"
 				placeholder="Введите текст для футболки"
 				value={value}
-				onChange={(evt) => onChange(evt.currentTarget.value)}
+				onChange={(evt) => onChange(evt.currentTarget.value.toLowerCase().replace(/[^a-z]/gi,''))}
 			/>
 		</div>
 	);
