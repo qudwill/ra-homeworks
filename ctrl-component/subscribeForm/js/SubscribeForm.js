@@ -11,11 +11,13 @@ class SubscribeForm extends React.Component {
 	};
 
 	changeEmail(evt) {
+		const { currentTarget } = evt;
+		 
 		this.setState({
-			email: evt.currentTarget.value
+			email: currentTarget.value
 		});
 
-		this.validateEmail(evt.currentTarget.value, evt.currentTarget.validity.valid);
+		this.validateEmail(currentTarget.value, currentTarget.validity.valid);
 	};
 
 	validateEmail(value, isValid) {
