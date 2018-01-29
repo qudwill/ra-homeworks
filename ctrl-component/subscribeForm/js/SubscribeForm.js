@@ -12,7 +12,7 @@ class SubscribeForm extends React.Component {
 
 	changeEmail(evt) {
 		const { currentTarget } = evt;
-		 
+
 		this.setState({
 			email: currentTarget.value
 		});
@@ -24,11 +24,7 @@ class SubscribeForm extends React.Component {
 		let formClassName = '';
 
 		if (value != '') {
-			if (isValid) {
-				formClassName = 'is-valid';
-  		} else {
-  			formClassName = 'is-error';
-  		}
+			formClassName = isValid ? 'is-valid' : 'is-error';
 		}
 
     this.setState({
